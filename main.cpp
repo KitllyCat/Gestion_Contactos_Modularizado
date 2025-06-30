@@ -1,5 +1,8 @@
 #include <iostream>
 #include <windows.h>
+#include <string>
+#include "contactos.h"
+
 using namespace std;
 
 int main(){
@@ -20,22 +23,22 @@ int main(){
 		switch(opcion){
 			case 1:{
 				system("cls");
-				//agregarContacto();
+				agregarContacto();
 				break;
 			}
 			case 2:{
 				system("cls");
-				//eliminarContacto();
+				eliminarContacto();
 				break;
 			}
 			case 3:{
 				system("cls");
-				//mostrarListadoRegistrados();
+				mostrarListadoRegistrados();
 				break;
 			}
 			case 4:{
 				system("cls");
-				//mostrarListadoExistentes();
+				mostrarListadoExistentes();
 				break;
 			}
 			case 5:{
