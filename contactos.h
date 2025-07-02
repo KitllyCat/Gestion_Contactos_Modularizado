@@ -24,5 +24,6 @@ void agregarContacto();
 void eliminarContacto();
 void mostrarListadoRegistrados();
 void mostrarListadoExistentes();
+void exportarContactos();
 
 #endif

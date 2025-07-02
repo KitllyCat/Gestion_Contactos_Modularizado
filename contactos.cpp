@@ -1,4 +1,5 @@
 #include "contactos.h"
+#include <fstream>
 
 contactoEmail conEm[tam];
 int cantCont=0;
@@ -167,4 +168,31 @@ void mostrarListadoExistentes(){
 	cin.ignore();
 	cin.get();
 	system("cls");
+}
+
+void exportarContactos() {
+    ofstream archivo("contactos_exportados.txt");
+
+    if (!archivo) {
+        cout << "No se pudo crear el archivo de exportación." << endl;
+        Sleep(2000);
+        system("cls");
+        return;
+    }
+
+    archivo << "Nombre | Sexo | Edad | Teléfono | Email | Nacionalidad\n";
+    for (int i = 0; i < cantCont; i++) {
+        archivo << conEm[i].nombres << " | "
+                << conEm[i].sexo << " | "
+                << conEm[i].edad << " | "
+                << conEm[i].telefono << " | "
+                << conEm[i].email << " | "
+                << conEm[i].nacionalidad << "\n\n";
+    }
+
+    archivo.close();
+
+    cout << "Contactos exportados exitosamente a 'contactos_exportados.txt'" << endl;
+    Sleep(3000);
+    system("cls");
 }

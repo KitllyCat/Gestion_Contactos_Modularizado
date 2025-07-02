@@ -2,7 +2,6 @@
 #include <windows.h>
 #include <string>
 #include "contactos.h"
-
 using namespace std;
 
 int main(){
@@ -15,7 +14,8 @@ int main(){
 		cout<<"2) Eliminar un contacto existente"<<endl;
 		cout<<"3) Mostrar todos los contactos guardados"<<endl;
 		cout<<"4) Mostrar todos los contactos guardados en orden de correos"<<endl;
-		cout<<"5) Salir"<<endl;
+		cout<<"5) Exportar los contactos en .txt"<<endl;
+		cout<<"6) Salir"<<endl;
 		cout<<"Selecione su opcion: ";
 		cin>>opcion;
 		cout<<endl;
@@ -43,6 +43,11 @@ int main(){
 			}
 			case 5:{
 				system("cls");
+				exportarContactos();
+				break;
+			}
+			case 6:{
+				system("cls");
 				cout<<"Saliendo del programa..."<<endl;
 				break;
 			}
@@ -53,6 +58,6 @@ int main(){
 				break;
 			}
 		}
-	}while(opcion!=5);
+	}while(opcion!=6);
 	return 0;
 }
